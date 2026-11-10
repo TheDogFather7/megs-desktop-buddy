@@ -28,7 +28,7 @@ These are already known, so you don't need to report them:
 In PowerShell, from the folder you saved the installer to:
 
 ```powershell
-(Get-FileHash .\Megs-Setup-1.0.1.exe -Algorithm SHA256).Hash -eq 'TODO-SHA256-SETUP-1.0.1'
+(Get-FileHash .\Megs-Setup-1.0.1.exe -Algorithm SHA256).Hash -eq '6e7582aa9b774b41c39311ed35bbfabc976f15bab45cfaf7db724ce2ad62ea90'
 ```
 
 It must print **True**. The hash is also on the [release page](../../releases/tag/v1.0.1). If you'd rather compare by eye, `Get-FileHash .\Megs-Setup-1.0.1.exe` prints it in capital letters, which is fine.

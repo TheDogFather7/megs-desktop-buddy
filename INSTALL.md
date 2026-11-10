@@ -13,7 +13,7 @@ Already have Megs 1.0.0? Follow the same steps: the installer upgrades it in pla
 This confirms the file is exactly the one published here. Open **Terminal** in your Downloads folder (right-click an empty spot in File Explorer → **Open in Terminal**) and run:
 
 ```powershell
-(Get-FileHash .\Megs-Setup-1.0.1.exe -Algorithm SHA256).Hash -eq 'TODO-SHA256-SETUP-1.0.1'
+(Get-FileHash .\Megs-Setup-1.0.1.exe -Algorithm SHA256).Hash -eq '6e7582aa9b774b41c39311ed35bbfabc976f15bab45cfaf7db724ce2ad62ea90'
 ```
 
 It must print **True**. If it prints **False**, delete the file and download it again. **Don't run an installer whose hash doesn't match.**
