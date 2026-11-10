@@ -11,16 +11,12 @@ From the [v1.0.0 release](../../releases/tag/v1.0.0), download **`Megs-Setup-1.0
 This confirms the file is exactly the one published here. Open **Terminal** in your Downloads folder (right-click an empty spot in File Explorer → **Open in Terminal**) and run:
 
 ```powershell
-Get-FileHash .\Megs-Setup-1.0.0.exe -Algorithm SHA256
+(Get-FileHash .\Megs-Setup-1.0.0.exe -Algorithm SHA256).Hash -eq 'e0392aab9e02c0d55e128161a3cbeb8a982dac41dd132f728609f950c584958a'
 ```
 
-The hash must be exactly:
+It must print **True**. If it prints **False**, delete the file and download it again. **Don't run an installer whose hash doesn't match.**
 
-```
-e0392aab9e02c0d55e128161a3cbeb8a982dac41dd132f728609f950c584958a
-```
-
-If it doesn't match, delete the file and download it again. **Don't run an installer whose hash doesn't match.**
+To see the hash itself, run `Get-FileHash .\Megs-Setup-1.0.0.exe`. PowerShell prints it in capital letters, which is fine: the comparison above ignores case.
 
 ## 3. Run the installer
 

@@ -4,7 +4,7 @@ Megs has no server of its own. It collects no analytics, telemetry or crash repo
 
 ## What is sent to your AI provider
 
-Megs sends requests to the provider you pick in **Settings → Brain**, under your own account and subject to that provider's privacy policy. Depending on your choice, that's one of:
+Megs sends requests to the provider you pick in **Settings… → Brain**, under your own account and subject to that provider's privacy policy. Depending on your choice, that's one of:
 
 - `openrouter.ai`, `api.anthropic.com`, `api.openai.com` or `generativelanguage.googleapis.com`
 - another OpenAI-compatible service you select or enter (for example Groq, Mistral, DeepSeek, xAI or Together)
@@ -15,12 +15,12 @@ Megs sends requests to the provider you pick in **Settings → Brain**, under yo
 Each request includes:
 
 - the conversation so far (up to the last 40 messages / 60,000 characters), including earlier messages restored from history after a restart
-- a system prompt containing the name you gave in **Settings → Personality** ("What should Megs call you?"), your **Custom instructions**, your local date and time, and your operating system name
+- a system prompt containing the name you gave in **Settings… → Personality** ("What should Megs call you?"), your **Custom instructions**, your local date and time, and your operating system name
 - anything you paste into the chat, including clipboard text you insert with the paste button
 
 ### When Megs makes a remark on its own
 
-Under **Settings → Personality → Where the sass comes from**:
+Under **Settings… → Personality → Where the sass comes from**:
 
 | Setting | What is sent |
 |---|---|
@@ -39,7 +39,7 @@ Everything lives in `%APPDATA%\Megs`:
 | File | Contents | Protection |
 |---|---|---|
 | `secrets.json` | Your API keys | Encrypted with Windows DPAPI (tied to your Windows account). If encryption isn't available, keys are stored base64-encoded, which is **not** encryption, and the Brain tab warns you. |
-| `chat-history.json` | The last 60 chat messages | Plain text. Turn off **Settings → Behavior → Remember the current chat between restarts** to stop saving it, or use **Clear chat history**. |
+| `chat-history.json` | The last 60 chat messages | Plain text. Turn off **Settings… → Behavior → Remember the current chat between restarts** to stop saving it, or use **Clear chat history**. |
 | `settings.json` | Your preferences, including your name and custom instructions | Plain text |
 
 Uninstalling Megs doesn't delete this folder. Delete `%APPDATA%\Megs` yourself to remove everything.

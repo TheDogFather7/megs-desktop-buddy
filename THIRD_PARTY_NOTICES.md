@@ -9,5 +9,6 @@ The Megs installer and app include the following third-party software. Each is d
 | [Node.js](https://nodejs.org/) (bundled in Electron) | 24.21.0 | MIT and others | `LICENSES.chromium.html` |
 | [DOMPurify](https://github.com/cure53/DOMPurify) | 3.4.16 | MPL-2.0 OR Apache-2.0 | `resources\app.asar` → `node_modules/dompurify/LICENSE` and `LICENSE-MPL` |
 | [marked](https://github.com/markedjs/marked) | 18.0.14 | MIT | `resources\app.asar` → `node_modules/marked/LICENSE` |
+| [@types/trusted-types](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/trusted-types) (bundled with DOMPurify) | 2.0.7 | MIT | `resources\app.asar` → `node_modules/@types/trusted-types/LICENSE` |
 
 The Windows installer and uninstaller are built with [electron-builder](https://www.electron.build/) (MIT) on [NSIS](https://nsis.sourceforge.io/) (zlib/libpng license), together with the NSIS plugins and the `elevate.exe` helper that electron-builder bundles, each under its own license.
