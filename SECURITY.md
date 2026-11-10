@@ -4,7 +4,8 @@
 
 | Version | Supported |
 |---|---|
-| 1.0.x | Yes |
+| 1.0.1 | Yes |
+| 1.0.0 | No. Please update: 1.0.1 includes security fixes. |
 
 ## Reporting a vulnerability
 
@@ -14,20 +15,20 @@ Report it privately instead: go to this repository's **Security** tab and choose
 
 You should get a reply within 7 days. Please give us a reasonable time to ship a fix before you disclose the issue publicly.
 
-## Known limitations of 1.0.0
+## Known limitations of 1.0.1
 
 These are already known, so you don't need to report them:
 
 - **Not code-signed.** The installer, the app and the uninstaller have no Authenticode signature. Always check the SHA-256 of the installer against the one in the release notes before you run it.
-- **No automatic updates.** Megs never checks for new versions. Watch this repository's releases to hear about fixes.
-- **Bundled runtime.** 1.0.0 ships Electron 44.4.5 (Chromium 152, Node.js 24.21). Newer Electron 44.x releases exist; a future Megs release will move to a current Electron.
+- **Updates aren't automatic.** Megs checks GitHub once a day and tells you when a new version is out, but you download and install it yourself. Megs 1.0.0 doesn't check at all, so watch this repository's releases.
+- **Bundled runtime.** 1.0.1 ships Electron 44.10.2 (Chromium 152, Node.js 24.22). Electron 44 gets security fixes until 2 March 2027; a later Megs release will move to a newer Electron before then.
 
 ## Verifying a download
 
 In PowerShell, from the folder you saved the installer to:
 
 ```powershell
-Get-FileHash .\Megs-Setup-1.0.0.exe -Algorithm SHA256
+(Get-FileHash .\Megs-Setup-1.0.1.exe -Algorithm SHA256).Hash -eq 'TODO-SHA256-SETUP-1.0.1'
 ```
 
-The hash must match the one published on the [release page](../../releases/tag/v1.0.0). PowerShell prints it in capital letters, which is fine. [INSTALL.md](INSTALL.md#2-check-the-download) has a one-line command that prints **True** or **False**.
+It must print **True**. The hash is also on the [release page](../../releases/tag/v1.0.1). If you'd rather compare by eye, `Get-FileHash .\Megs-Setup-1.0.1.exe` prints it in capital letters, which is fine.

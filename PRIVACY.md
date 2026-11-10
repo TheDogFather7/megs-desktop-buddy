@@ -1,13 +1,13 @@
 # Privacy
 
-Megs has no server of its own. It collects no analytics, telemetry or crash reports, and it doesn't check for updates. The only network traffic is between your computer and the AI provider you choose.
+Megs has no server of its own. It collects no analytics, telemetry or crash reports. Its network traffic is between your computer and the AI provider you choose, plus a daily check with GitHub for a newer version of Megs (see [Checking for new versions](#checking-for-new-versions)).
 
 ## What is sent to your AI provider
 
 Megs sends requests to the provider you pick in **Settings… → Brain**, under your own account and subject to that provider's privacy policy. Depending on your choice, that's one of:
 
 - `openrouter.ai`, `api.anthropic.com`, `api.openai.com` or `generativelanguage.googleapis.com`
-- another OpenAI-compatible service you select or enter (for example Groq, Mistral, DeepSeek, xAI or Together)
+- another OpenAI-compatible service you select or enter (for example Groq, Mistral, DeepSeek, xAI or Together). A key you save for such a server is only ever sent to that server, and over plain `http://` only to your own computer or home network.
 - a local server such as Ollama (`http://localhost:11434`) or LM Studio. Traffic stays on your computer unless you change the server address to another machine.
 
 ### When you chat
@@ -32,17 +32,25 @@ These background requests include the same system prompt as a chat (name, custom
 
 Choose **Built-in lines only** if you don't want this.
 
+## Checking for new versions
+
+A minute after Megs starts, and then once a day while it runs, Megs asks GitHub's public releases API (`api.github.com`) for the latest release of this repository. The request carries no cookies, API keys or personal details, and identifies itself only as `Megs`. Like any web request, it shows GitHub your IP address. [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) applies.
+
+Megs never downloads or installs anything by itself. If a newer version is out, it tells you once in a speech bubble and shows it under **Settings… → About**. **Get it** opens this repository's releases page in your browser.
+
+To turn the check off, switch off **Settings… → Behavior → Check for new versions**.
+
 ## What is stored on your computer
 
 Everything lives in `%APPDATA%\Megs`:
 
 | File | Contents | Protection |
 |---|---|---|
-| `secrets.json` | Your API keys | Encrypted with Windows DPAPI (tied to your Windows account). If encryption isn't available, keys are stored base64-encoded, which is **not** encryption, and the Brain tab warns you. |
+| `secrets.json` | Your API keys | Encrypted with Windows DPAPI (tied to your Windows account). If secure storage isn't available, Megs keeps keys in memory only, never on disk, and you sign in again each time it starts. The Brain tab tells you when that's the case. |
 | `chat-history.json` | The last 60 chat messages | Plain text. Turn off **Settings… → Behavior → Remember the current chat between restarts** to stop saving it, or use **Clear chat history**. |
-| `settings.json` | Your preferences, including your name and custom instructions | Plain text |
+| `settings.json` | Your preferences, including your name and custom instructions, and the newest version the update check has seen | Plain text |
 
-Uninstalling Megs doesn't delete this folder. Delete `%APPDATA%\Megs` yourself to remove everything.
+Uninstalling Megs 1.0.1 or later deletes this folder. The 1.0.0 uninstaller didn't, so if you uninstalled 1.0.0, delete `%APPDATA%\Megs` yourself.
 
 ## Signing in with OpenRouter
 
