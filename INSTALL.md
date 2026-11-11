@@ -1,28 +1,28 @@
 # Installing Megs on Windows 11
 
-Version 1.0.1 · about 5 minutes · no admin rights needed
+Version 1.0.2 · about 5 minutes · no admin rights needed
 
 ## 1. Download
 
-From the [v1.0.1 release](../../releases/tag/v1.0.1), download **`Megs-Setup-1.0.1.exe`** (115 MB).
+From the [v1.0.2 release](../../releases/tag/v1.0.2), download **`Megs-Setup-1.0.2.exe`** (<<SIZE-1.0.2>> MB).
 
-Already have Megs 1.0.0? Follow the same steps: the installer upgrades it in place and keeps your settings, chat history and keys.
+Already have Megs 1.0.0 or 1.0.1? Follow the same steps: the installer upgrades it in place and keeps your settings, chat history and keys.
 
 ## 2. Check the download
 
 This confirms the file is exactly the one published here. Open **Terminal** in your Downloads folder (right-click an empty spot in File Explorer → **Open in Terminal**) and run:
 
 ```powershell
-(Get-FileHash .\Megs-Setup-1.0.1.exe -Algorithm SHA256).Hash -eq '6e7582aa9b774b41c39311ed35bbfabc976f15bab45cfaf7db724ce2ad62ea90'
+(Get-FileHash .\Megs-Setup-1.0.2.exe -Algorithm SHA256).Hash -eq '<<SHA256-1.0.2>>'
 ```
 
 It must print **True**. If it prints **False**, delete the file and download it again. **Don't run an installer whose hash doesn't match.**
 
-To see the hash itself, run `Get-FileHash .\Megs-Setup-1.0.1.exe`. PowerShell prints it in capital letters, which is fine: the comparison above ignores case.
+To see the hash itself, run `Get-FileHash .\Megs-Setup-1.0.2.exe`. PowerShell prints it in capital letters, which is fine: the comparison above ignores case.
 
 ## 3. Run the installer
 
-Double-click `Megs-Setup-1.0.1.exe`. It installs for your Windows account only, so there's no admin prompt. It adds Megs to the Start menu and your desktop, and starts Megs when it finishes.
+Double-click `Megs-Setup-1.0.2.exe`. It installs for your Windows account only, so there's no admin prompt. It adds Megs to the Start menu and your desktop, and starts Megs when it finishes.
 
 ### "Windows protected your PC"
 
@@ -75,7 +75,7 @@ To stop the daily check, turn off **Settings… → Behavior → Check for new v
 2. The uninstaller removes Megs, its "Start Megs when I log in" entry, its cached copy of the installer, and `%APPDATA%\Megs` (your settings, chat history and saved keys).
 3. If you signed in with OpenRouter, also delete the "Megs desktop buddy" key in your OpenRouter account.
 
-**Uninstalling 1.0.0?** Its uninstaller leaves things behind. Turn off **Start Megs when I log in** first (**Settings… → Behavior**), and afterwards delete `%APPDATA%\Megs` and `%LOCALAPPDATA%\megs-desktop-buddy-updater` yourself. Or update to 1.0.1 first, then uninstall.
+**Uninstalling 1.0.0?** Its uninstaller leaves things behind. Turn off **Start Megs when I log in** first (**Settings… → Behavior**), and afterwards delete `%APPDATA%\Megs` and `%LOCALAPPDATA%\megs-desktop-buddy-updater` yourself. Or update to the latest version first, then uninstall.
 
 ## Troubleshooting
 

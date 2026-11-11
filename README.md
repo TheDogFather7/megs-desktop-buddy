@@ -6,17 +6,17 @@ You bring your own model: sign in with OpenRouter, paste an Anthropic, OpenAI or
 
 ## Download
 
-Get **`Megs-Setup-1.0.1.exe`** from the [v1.0.1 release](../../releases/tag/v1.0.1), then follow [INSTALL.md](INSTALL.md).
+Get **`Megs-Setup-1.0.2.exe`** from the [v1.0.2 release](../../releases/tag/v1.0.2), then follow [INSTALL.md](INSTALL.md).
 
 SHA-256 of the installer:
 
 ```
-6e7582aa9b774b41c39311ed35bbfabc976f15bab45cfaf7db724ce2ad62ea90  Megs-Setup-1.0.1.exe
+<<SHA256-1.0.2>>  Megs-Setup-1.0.2.exe
 ```
 
 **Requirements:** Windows 11 (64-bit) and an account with an LLM provider, or a local model server.
 
-**Already using Megs 1.0.0?** Run the new installer. It upgrades Megs in place and keeps your settings, chat history and keys. 1.0.1 includes security fixes, so please update.
+**Already using Megs 1.0.0 or 1.0.1?** Run the new installer. It upgrades Megs in place and keeps your settings, chat history and keys. 1.0.2 moves to a newer Electron and picks up its upstream security fixes, so please update.
 
 > [!IMPORTANT]
 > The installer and app are **not code-signed**, so Windows SmartScreen will warn you, and Smart App Control will block Megs completely. Read [INSTALL.md](INSTALL.md) before you run it.
