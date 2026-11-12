@@ -4,7 +4,7 @@ Version 1.0.2 · about 5 minutes · no admin rights needed
 
 ## 1. Download
 
-From the [v1.0.2 release](../../releases/tag/v1.0.2), download **`Megs-Setup-1.0.2.exe`** (<<SIZE-1.0.2>> MB).
+From the [v1.0.2 release](../../releases/tag/v1.0.2), download **`Megs-Setup-1.0.2.exe`** (116 MB).
 
 Already have Megs 1.0.0 or 1.0.1? Follow the same steps: the installer upgrades it in place and keeps your settings, chat history and keys.
 
@@ -13,7 +13,7 @@ Already have Megs 1.0.0 or 1.0.1? Follow the same steps: the installer upgrades 
 This confirms the file is exactly the one published here. Open **Terminal** in your Downloads folder (right-click an empty spot in File Explorer → **Open in Terminal**) and run:
 
 ```powershell
-(Get-FileHash .\Megs-Setup-1.0.2.exe -Algorithm SHA256).Hash -eq '<<SHA256-1.0.2>>'
+(Get-FileHash .\Megs-Setup-1.0.2.exe -Algorithm SHA256).Hash -eq '19b7af7ead2a004f39ccd3d34fad46aa834ffec69f39b2522c9351101d1f3e81'
 ```
 
 It must print **True**. If it prints **False**, delete the file and download it again. **Don't run an installer whose hash doesn't match.**

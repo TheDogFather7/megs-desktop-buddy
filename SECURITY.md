@@ -29,7 +29,7 @@ These are already known, so you don't need to report them:
 In PowerShell, from the folder you saved the installer to:
 
 ```powershell
-(Get-FileHash .\Megs-Setup-1.0.2.exe -Algorithm SHA256).Hash -eq '<<SHA256-1.0.2>>'
+(Get-FileHash .\Megs-Setup-1.0.2.exe -Algorithm SHA256).Hash -eq '19b7af7ead2a004f39ccd3d34fad46aa834ffec69f39b2522c9351101d1f3e81'
 ```
 
 It must print **True**. The hash is also on the [release page](../../releases/tag/v1.0.2). If you'd rather compare by eye, `Get-FileHash .\Megs-Setup-1.0.2.exe` prints it in capital letters, which is fine.

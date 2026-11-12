@@ -11,7 +11,7 @@ Get **`Megs-Setup-1.0.2.exe`** from the [v1.0.2 release](../../releases/tag/v1.0
 SHA-256 of the installer:
 
 ```
-<<SHA256-1.0.2>>  Megs-Setup-1.0.2.exe
+19b7af7ead2a004f39ccd3d34fad46aa834ffec69f39b2522c9351101d1f3e81  Megs-Setup-1.0.2.exe
 ```
 
 **Requirements:** Windows 11 (64-bit) and an account with an LLM provider, or a local model server.
